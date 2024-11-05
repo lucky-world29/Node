@@ -32,9 +32,9 @@
  //  CREATE A User in database (xyz) and table "/*--department--*/"
  
  app.post("/dept",(req,res)=>{
-     const {name,email,age} = req.body;
-     const sql = "insert into department (name) values(?)";
-     db.query(sql,[name],(err,result)=>{
+     const {deptname} = req.body;
+     const sql = "insert into department (deptname) values(?)";
+     db.query(sql,[deptname],(err,result)=>{
          if (err) throw err;
          res.send(result);
      });
