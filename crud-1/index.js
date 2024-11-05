@@ -40,6 +40,16 @@ app.post("/nodeusers",(req,res)=>{
     });
 });
 
-// app.get("/test", (req, res) => {
-//     res.send("Hello, this is a message from the /nodeusers endpoint!");
-// });
+app.get("/test", (req, res) => {
+    res.send("Hello, this is a message from the /nodeusers endpoint!");
+});
+
+// READ
+
+app.get("/nodeusers",(req,res)=>{
+    const sql = "SELECT * FROM nodeusers";
+    db.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
