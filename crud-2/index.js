@@ -56,7 +56,15 @@
  
  app.put("dept/:id",(req,res)=>{
     const {id} = req.params;
-    /**
-     * continue 
-     */
+    const {name}=req.body;
  })
+//  app.put("/users/:id", (req, res) => {
+//     const { id } = req.params;
+//     const { name, email, age } = req.body;
+//     const query = "UPDATE users SET name = ?, email = ?, age = ?
+//     WHERE id = ?";
+//     db.query(query, [name, email, age, id], (err, result) => {
+//     if (err) throw err;
+//     res.send(result);
+//     });
+//     });
