@@ -13,6 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
+
 const db = mysql.createConnection({
     host : process.env.DB_HOST,
     user : process.env.DB_USER,
@@ -31,18 +32,31 @@ app.listen(5000 , () =>{
 
 //  CREATE A User in database (xyz) and table "/*--nodeusers--*/"
 
-app.post("/nodeusers",(req,res)=>{
-    const {name,email,age} = req.body;
-    const sql = "insert into nodeusers (name,email,age) values(?,?,?)";
-    db.query(sql,[name,email,age],(err,result)=>{
-        if (err) throw err;
-        res.send(result);
-    });
-});
+// app.post("/nodeusers",async(req,res)=>{
+//     const {name,email,age} = req.body;
+//     const sql = "insert into nodeusers (name,email,age) values(?,?,?)";
+//     db.query(sql,[name,email,age],(err,result)=>{
+//         if (err) throw err;
+//         res.send(result);
+//     });
+// });
 
-app.get("/test", (req, res) => {
-    res.send("Hello, this is a message from the /nodeusers endpoint!");
-});
+// Endpoint to add a new user
+app.post('/nodeusers', (req, res) => {
+    const { name, email, age } = req.body;
+    const sql = 'INSERT INTO nodeusers (name, email, age) VALUES (?, ?, ?)';
+  
+    db.query(sql, [name, email, age], (error, results) => {
+      if (error) {
+        console.error('Failed to insert user:', error);
+        res.status(500).json({ error: 'Failed to add user' });
+      } else {
+        // Retrieve the newly created user
+        const newUser = { id: results.insertId, name, email, age };
+        res.json(newUser);
+      }
+    });
+  });
 
 // READ
 
