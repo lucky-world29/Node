@@ -32,14 +32,6 @@ app.listen(5000 , () =>{
 
 //  CREATE A User in database (xyz) and table "/*--nodeusers--*/"
 
-// app.post("/nodeusers",async(req,res)=>{
-//     const {name,email,age} = req.body;
-//     const sql = "insert into nodeusers (name,email,age) values(?,?,?)";
-//     db.query(sql,[name,email,age],(err,result)=>{
-//         if (err) throw err;
-//         res.send(result);
-//     });
-// });
 
 // Endpoint to add a new user
 app.post('/nodeusers', (req, res) => {
