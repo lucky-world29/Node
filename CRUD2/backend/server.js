@@ -54,7 +54,7 @@
         req.body.phone,
         req.body.address
      ] 
-       db.query(sql,[values],(err,result)=>{  cond...     });
+       db.query(sql,[values],(err,result)=>{  cond...     });  /// ************* [values]^*
      */  
 
      db.query(sql,[name,email,phone,address],(err,result)=>{
