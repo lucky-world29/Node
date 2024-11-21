@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/create' element={<Create />} />
-        <Route path='/component/read/:id' element={<Read />} /> {/* Doubt */}
+        <Route path='/read/:id' element={<Read />} /> {/* Doubt */}
         <Route path='/edit/:id' element={<Update />} /> {/* Doubt */}
       </Routes>
     </BrowserRouter>

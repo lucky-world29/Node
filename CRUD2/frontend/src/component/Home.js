@@ -66,7 +66,7 @@ function Home() {
                   <td>{student.address}</td>
                   <td>
                     <div className="d-flex justify-content-between"> {/* Flex container for buttons */}
-                      <Link to={`/component/read/${student.id}`} className='btn btn-sm btn-info'> Read </Link> {/* the path should be correct*/}
+                      <Link to={`/read/${student.id}`} className='btn btn-sm btn-info'> Read </Link> {/* the path should be correct*/}
                       <Link to={`/edit/${student.id}`} className='btn btn-sm btn-primary mx-1'>Edit</Link> {/* Adjusted margin */}
                       <button onClick={() => handleDelete(student.id)} className='btn btn-sm btn-danger'>Delete</button>
                     </div>
