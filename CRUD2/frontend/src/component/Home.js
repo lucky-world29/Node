@@ -75,7 +75,7 @@ function Home() {
               ))
             ) : (
               <tr>
-                <td colSpan="6">No data available</td>
+                <td colSpan="6" className='text-success bg-warning'>No data available</td>
               </tr>
             )}
           </tbody>
