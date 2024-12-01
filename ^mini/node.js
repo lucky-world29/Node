@@ -69,3 +69,5 @@ class Model extends Car {
 const mycar = new Model("Ford", "Mustang");
 console.log(mycar.show());
 
+
+
