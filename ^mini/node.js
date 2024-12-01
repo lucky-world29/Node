@@ -17,6 +17,7 @@ class Car {
 }
 
 const mycar = new Car("Ford");
+
 console.log(mycar.brand);
 */
 
