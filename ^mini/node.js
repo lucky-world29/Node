@@ -60,6 +60,7 @@ class Model extends Car {
   constructor(name, mod) {  //The constructor is a special method used for initializing objects.
     super(name);
     this.model = mod;
+     
   }  
   show() {
       return this.present() + ', it is a ' + this.model
