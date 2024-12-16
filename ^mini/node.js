@@ -1,6 +1,4 @@
 
-
-
 /**
    Classes
 ES6 introduced classes.
