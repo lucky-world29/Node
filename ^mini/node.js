@@ -9,6 +9,7 @@ and the properties are assigned inside a constructor() method.
 
 
 //Example-1 =>
+  
 /*
 class Car {
   constructor(name) {  // The constructor is a special method used for initializing objects.

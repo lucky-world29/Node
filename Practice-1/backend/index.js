@@ -60,6 +60,6 @@ app.get("/nodeusers",(req,res)=>{
     })
 })
 
-app.put(
+// app.put(
   
-)
+// )
