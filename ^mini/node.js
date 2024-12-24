@@ -11,11 +11,11 @@ and the properties are assigned inside a constructor() method.
 
 
 //Example-1 =>
-<<<<<<< HEAD
+// <<<<<<< HEAD
   
-=======
+// =======
 
->>>>>>> a9dd189e6c7efb075c545a8b7376bb8fd22e158d
+// >>>>>>> a9dd189e6c7efb075c545a8b7376bb8fd22e158d
 /*
 class Car {
   constructor(name) {  // The constructor is a special method used for initializing objects.
